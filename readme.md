@@ -7,7 +7,7 @@
 - Introduction to AI
   1. AI 介绍 (unimplemented!)
 - Evolutionary Computation (进化计算)
-  1. [优化的基本概念](lectures/Part.1/lecture2.md) (unimplemented!)
+  1. [优化的基本概念](lectures/Part.1/lecture2.md)
   2. [遗传算法](lectures/Part.1/lecture3.md)
   3. [约束和多目标优化](lectures/Part.1/lecture4.md)
   4. [组合优化](lectures/Part.1/lecture5.md)
