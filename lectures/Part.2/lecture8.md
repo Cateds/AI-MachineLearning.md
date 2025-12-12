@@ -16,27 +16,39 @@
 通常我们使用损失函数来衡量模型的预测结果与真实结果之间的差距。损失函数计算出来的值叫做损失 (loss)。有很多种损失函数的形式
 
 - 均方误差 (Mean Squared Error, MSE)：用于回归任务，计算预测值与真实值之间的平方差的平均值。
+
   $$
     \mathrm{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2
   $$
+
   - MSE 总是凸函数并且可微，因此易于优化
   - 对异常值敏感，因为平方项会放大较大的误差
+
 - 均绝对误差 (Mean Absolute Error, MAE)：用于回归任务，计算预测值与真实值之间的绝对差的平均值。
+
   $$
     \mathrm{MAE} = \frac{1}{N} \sum_{i=1}^N | y_i - \hat{y}_i |
   $$
+
   - MAE 对异常值更不敏感，因为它使用绝对值而不是平方
   - MAE 在某些点不可微，可能会导致优化困难
+
 - 交叉熵损失 (Cross-Entropy Loss)：用于分类任务，衡量预测的概率分布与真实类别之间的差异。
+
   - 二进制交叉熵 (Binary Cross Entropy)
+
     $$
         l = -\frac{1}{N}\sum_{i=1}^N (y_i\log\hat{y}_i + (1 - y_i)\log(1 - \hat{y}_i))
     $$
+
     - 适用于二分类任务
+
   - 多类交叉熵 (Categorical Cross Entropy)
+
     $$
         l = -\sum_{i=1}^N \sum_{j=1}^K y_{i,j} \log(\hat{y}_{i,j})
     $$
+
     - 可微，因此易于优化
     - 有多个局部极值，可能会导致优化困难
 
