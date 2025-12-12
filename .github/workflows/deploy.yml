@@ -1,0 +1,59 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # 或者是 master，取决于你的默认分支名
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 允许推送到 gh-pages 分支
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1. 安装 Rust 工具链
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      # 1.5 缓存 Cargo 依赖
+      - name: Cache cargo registry
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      # 2. 安装特定版本的 mdbook
+      - name: Install mdbook
+        run: |
+          if ! command -v mdbook &> /dev/null; then
+            cargo install mdbook --version 0.5.2
+          fi
+
+      # 3. 安装特定版本的 mdbook-katex
+      - name: Install mdbook-katex
+        run: |
+          if ! command -v mdbook-katex &> /dev/null; then
+            cargo install mdbook-katex --version 0.10.0-alpha
+          fi
+
+      # 4. 构建书籍
+      - name: Build Book
+        run: mdbook build
+
+      # 5. 部署到 GitHub Pages
+      # 这会将 book/ 目录下的内容推送到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./book

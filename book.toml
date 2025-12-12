@@ -1,0 +1,8 @@
+[book]
+title = "AI & Machine Learning Lecture Notes"
+authors = ["Cateds"]
+language = "zh_cn"
+src = "lectures"
+
+[preprocessor.katex]
+after = ["links"]

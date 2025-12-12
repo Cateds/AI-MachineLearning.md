@@ -1,0 +1,22 @@
+# Artificial Intelligence & Machine Learning (AI & ML) Lecture Notes @ 2025-2026 Fall
+
+> Lecture notes for Artificial Intelligence & Machine Learning (AI & ML) course @ 2025-2026 Fall, Glasgow College, UESTC.
+>
+> 有一些嵌套层级的公式在 GitHub 上无法正常显示，建议下载到本地后使用支持的 Markdown 编辑器查看（如 VSCode, Typora, Obsidian 等）。
+
+## Index
+
+- Introduction to AI
+  1. AI 介绍 (unimplemented!)
+- Evolutionary Computation (进化计算)
+  1. [优化的基本概念](Part.1/lecture2.md)
+  2. [遗传算法](Part.1/lecture3.md)
+  3. [约束和多目标优化](Part.1/lecture4.md)
+  4. [组合优化](Part.1/lecture5.md)
+- Machine Learning (机器学习)
+  1. [机器学习概述](Part.2/lecture7.md)
+  2. [模型训练及数据预处理](Part.2/lecture8.md)
+  3. [特征选择](Part.2/lecture9.md)
+  4. (unimplemented!)
+
+> 我觉得今年的内容量已经算得上是每章塞爆了，结果你说今年相比去年砍了很多内容是什么意思？
