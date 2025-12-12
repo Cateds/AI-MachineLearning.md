@@ -115,7 +115,7 @@ K 折交叉验证 (K-Fold Cross Validation) 是一种用于评估机器学习模
 
 ![1760599213659](lecture8.assets/1760599213659.png)
 
-在 K 折交叉验证后，可以得到 k 个不同的预测误差 $e_1, e_2, \ldots, e_k$ ，得到 $\bar{e} = \frac{1}{k}\sum_{i=1}^k e_i$ ，以及标准差 $\sigma = \sqrt{\frac{1}{k}\sum_{i=1}^k(e_i - \bar{e})^2}$ 。得到的数据就是模型的偏差和方差的估计。
+在 K 折交叉验证后，可以得到 k 个不同的预测误差 $e_1, e_2, \ldots, e_k$ ，得到 $\overline{e} = \frac{1}{k}\sum_{i=1}^k e_i$ ，以及标准差 $\sigma = \sqrt{\frac{1}{k}\sum_{i=1}^k(e_i - \overline{e})^2}$ 。得到的数据就是模型的偏差和方差的估计。
 
 通常，偏差和方差是互相制约的。降低偏差通常会增加方差，反之亦然。这种权衡被称为偏差-方差权衡 (Bias-Variance Tradeoff)。在模型选择和调优过程中，需要在偏差和方差之间找到一个平衡点，以获得最佳的模型性能。
 

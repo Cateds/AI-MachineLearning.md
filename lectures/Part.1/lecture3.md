@@ -238,11 +238,11 @@
 使用[比例选择](#选择操作决定哪些个体可以进入交配池)的情况，用 $N$ 表示交配池的容量 $\mathrm{Pop\_Size}$，有这样的公式：
 
 $$
-\frac{f_i}{\sum_{j=1}^{N} f_j} \cdot N = \frac{f_i \cdot N}{\sum_{j=1}^{N} f_j} = \frac{f_i}{\bar{f}}
+\frac{f_i}{\sum_{j=1}^{N} f_j} \cdot N = \frac{f_i \cdot N}{\sum_{j=1}^{N} f_j} = \frac{f_i}{\overline{f}}
 $$
 
 - $f_i$ 指的是个体 $i$ 的适应度
-- $\bar{f} = \frac{\sum_{j=1}^{N} f_j}{N}$ 是种群的平均适应度
+- $\overline{f} = \frac{\sum_{j=1}^{N} f_j}{N}$ 是种群的平均适应度
 - $N$ 是交配池的容量 $\mathrm{Pop\_Size}$
 
 使用比例选择可能会引入一些问题

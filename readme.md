@@ -14,5 +14,7 @@
 - Machine Learning (机器学习)
   1. [机器学习概述](lectures/Part.2/lecture7.md)
   2. [模型训练及数据预处理](lectures/Part.2/lecture8.md)
-  3. [特征选择](lectures/Part.2/lecture9.md) (unimplemented!)
+  3. [特征选择](lectures/Part.2/lecture9.md)
   4. (unimplemented!)
+
+> 我觉得今年的内容量已经算得上是每章塞爆了，结果你说今年相比去年砍了很多内容是什么意思？
