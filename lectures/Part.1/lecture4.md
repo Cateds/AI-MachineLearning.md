@@ -52,6 +52,7 @@ $$
 1. 选择一个可以接受的违规程度 $\epsilon$
 2. 设计一个最优函数值 $\tilde{f}$，这个值预期可以得到，但不一定是最优值
 3. 设计一个惩罚系数 $k$，使得 $k \cdot \epsilon$ 大约是 50 倍的 $\tilde{f}$
+
    $$
    k \cdot\epsilon = 50 \tilde{f} \Rightarrow k = \frac{50\tilde{f}}{\epsilon}
    $$
