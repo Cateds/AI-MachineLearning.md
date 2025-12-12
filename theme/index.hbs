@@ -167,8 +167,6 @@
                     <h1 class="menu-title">{{ book_title }}</h1>
 
                     <div class="right-buttons">
-                        <!-- Place this tag where you want the button to render. -->
-                        <a class="github-button" href="https://github.com/Cateds/AI-MachineLearning.md" data-icon="octicon-star" data-show-count="true" aria-label="Star Cateds/AI-MachineLearning.md on GitHub">Star</a>
                         {{#if print_enable}}
                         <a href="{{ path_to_root }}print.html" title="Print this book" aria-label="Print this book">
                             {{fa "solid" "print" "print-button"}}
@@ -184,7 +182,6 @@
                             {{fa "solid" "pencil" "git-edit-button"}}
                         </a>
                         {{/if}}
-
                     </div>
                 </div>
 
@@ -218,6 +215,22 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         {{{ content }}}
+
+                        <script src="https://giscus.app/client.js"
+                                data-repo="Cateds/AI-MachineLearning.md"
+                                data-repo-id="R_kgDOQjJfdw"
+                                data-category="General"
+                                data-category-id="DIC_kwDOQjJfd84CztyC"
+                                data-mapping="pathname"
+                                data-strict="0"
+                                data-reactions-enabled="1"
+                                data-emit-metadata="0"
+                                data-input-position="top"
+                                data-theme="preferred_color_scheme"
+                                data-lang="zh-CN"
+                                crossorigin="anonymous"
+                                async>
+                        </script>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -363,10 +376,6 @@
             });
         </script>
         {{/if}}
-
     </div>
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
     </body>
 </html>
