@@ -6,7 +6,7 @@
 
 优化 (Optimization) 指的是寻找一个最好的解的过程。对于求解问题，可以使用普通的优化方法或者基于 AI 的优化方法——在大多数情况下基于 AI 的优化算法更易于使用。
 
-### 引入：旅行商问题
+### 引入 1: 旅行商问题
 
 一个典型的优化问题是旅行商问题 (Traveling Salesman Problem, TSP)， 即一个旅行商需要访问若干个城市，并且每个城市只能访问一次，最后回到出发点。目标是找到一条路径，使得总的旅行距离最短。
 
@@ -16,8 +16,8 @@
 
 $$
 \begin{aligned}
-\min_p L(p) \\
-p \in \Omega \quad
+& \min_p L(p) \\
+&p \in \Omega \quad
 \Omega: \text{所有城市的排列}
 \end{aligned}
 $$
@@ -36,7 +36,7 @@ $$
 
 $$
 \begin{aligned}
-\min_p \sum^{n-1}_{i=1} \sum^{n}_{j=i+1} f_{ij} \cdot d_{p(i)p(j)} \\
+& \min_p \sum^{n-1}_{i=1} \sum^{n}_{j=i+1} f_{ij} \cdot d_{p(i)p(j)} \\
 p \in \Omega: \text{所有站点的排列}
 \end{aligned}
 $$
@@ -69,8 +69,8 @@ K 背包问题是一个经典的组合优化问题，假设有 n 个物品和 K 
 
 $$
 \begin{aligned}
-\min f(x) = -(x-1)^2\\
-\mathrm{s.t.} \ g(x) = x-1.5 \geq 0
+& \min f(x) = -(x-1)^2\\
+& \mathrm{s.t.} \ g(x) = x-1.5 \geq 0
 \end{aligned}
 $$
 
@@ -92,9 +92,9 @@ $$
 
 $$
 \begin{aligned}
-\max f_1(x_1, x_2, \ldots, x_n)\\
-\max f_2(x_1, x_2, \ldots, x_n)\\
-x = (x_1, x_2, \ldots, x_n) \in D, D\subseteq R^n
+& \max f_1(x_1, x_2, \ldots, x_n)\\
+& \max f_2(x_1, x_2, \ldots, x_n)\\
+& x = (x_1, x_2, \ldots, x_n) \in D, D\subseteq R^n
 \end{aligned}
 $$
 
@@ -128,8 +128,8 @@ $$
 
 $$
 \begin{aligned}
-\max f(x) \\
-x \in \Omega
+& \max f(x) \\
+& x \in \Omega
 \end{aligned}
 $$
 

@@ -13,6 +13,6 @@
   4. [组合优化](lectures/Part.1/lecture5.md)
 - Machine Learning (机器学习)
   1. [机器学习概述](lectures/Part.2/lecture7.md)
-  2. [模型训练](lectures/Part.2/lecture8.md) (unimplemented!)
+  2. [模型训练及数据预处理](lectures/Part.2/lecture8.md)
   3. [特征选择](lectures/Part.2/lecture9.md) (unimplemented!)
   4. (unimplemented!)
