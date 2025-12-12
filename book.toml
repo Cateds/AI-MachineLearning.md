@@ -6,3 +6,6 @@ src = "lectures"
 
 [preprocessor.katex]
 after = ["links"]
+
+[output.html]
+git-repository-url = "https://github.com/Cateds/AI-MachineLearning.md"
