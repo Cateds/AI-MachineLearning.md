@@ -4,7 +4,11 @@
 >
 > 有一些嵌套层级的公式在 GitHub 上无法正常显示，建议下载到本地后使用支持的 Markdown 编辑器查看（如 VSCode, Typora, Obsidian 等）。
 
-## Index
+原仓库 GitHub 地址：
+
+<https://github.com/Cateds/AI-MachineLearning.md>
+
+如果有帮助的话，欢迎在 GitHub 上给本项目点个 Star ⭐️
 
 - Introduction to AI
   1. AI 介绍 (unimplemented!)
@@ -17,6 +21,7 @@
   1. [机器学习概述](Part.2/lecture7.md)
   2. [模型训练及数据预处理](Part.2/lecture8.md)
   3. [特征选择](Part.2/lecture9.md)
-  4. (unimplemented!)
+  4. [支持向量机](Part.2/lecture10.md) (unimplemented!)
+  5. [人工神经网络入门](Part.2/lecture11.md) (unimplemented!)
 
 > 我觉得今年的内容量已经算得上是每章塞爆了，结果你说今年相比去年砍了很多内容是什么意思？
