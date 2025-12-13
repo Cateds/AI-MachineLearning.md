@@ -43,6 +43,7 @@
 和 [Lec.4](lecture4.md#约束优化-constrained-optimization) 里提到的方法类似，我们把约束条件转化成惩罚项，加入到目标函数中，数学形式如下：
 
 $$
+
 f_{new}(x) = f(x) - p \cdot h(x) \\
 \mathrm{where}\ h(x) = \begin{cases}
   w(x) - c , \mathrm{if}\ w(x) > c \\
@@ -55,7 +56,9 @@ $$
 - $c$ 是背包的最大承载重量
 - $p$ 是一个大的正数，表示惩罚的强度
 
-确定 $p$ 的值的过程和 [Lec.4](lecture4.md#约束优化-constrained-optimization) 里提到的方法类似，都是按照 $p = \frac{50 \tilde{f}}{\epsilon}$ 的计算方法计算，这里 $\tilde{f}$ 是一个对原始目标函数 $f(x)$ 的估计，取. \$ 10000，$\epsilon$ 能够容忍的最大违反约束，这里取 1kg，计算出 $p = 500000$。
+确定 $p$ 的值的过程和 [Lec.4](lecture4.md#约束优化-constrained-optimization) 里提到的方法类似，都是按照 $p=\frac{50 \tilde{f}}{\epsilon}$ 的计算方法计算。
+
+这里 $\tilde{f}$ 是一个对原始目标函数 $f(x)$ 的估计，取 \$10000； $\epsilon$ 是能够容忍的最大违反约束，这里取 1kg，计算出 $p = 500000$。
 
 使用上述方法，我们可以将背包问题转化为一个无约束优化问题，然后使用遗传算法或其他优化方法来求解。使用遗传算法求解得到这个问题的解是 10101，对应的最优目标函数是 \$7k。
 
