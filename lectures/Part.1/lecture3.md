@@ -221,7 +221,7 @@
   - $\alpha$ 是一个在 $[0,1]$ 之间的随机数
   - $\alpha$ 取 0.5 时即为取平均值
   - ![1758202518563](lecture3.assets/1758202518563.png)
-- 部分匹配交叉 (Partially Matched Crossover)
+- 有序交叉 (Order Crossover, OX)
   - ![1758202568577](lecture3.assets/1758202568577.png)
   - 适用于排列编码
   - 从一个亲本中选择一部分排列，复制到它的第一个子代中
