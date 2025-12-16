@@ -85,6 +85,10 @@ $$
 - Noise：噪声，指的是数据中不可预测的随机误差。
   - 噪声是数据本身固有的，无法通过模型来消除。
 
+> 英国知名主播 Vedal 解释什么是过拟合.mp4 :
+>
+> <https://www.bilibili.com/video/BV1xf4qeGE2f/?share_source=copy_web&vd_source=685d42481fb6e71212577a692ce02359>
+
 ### 偏差 (Bias)
 
 高偏差的模型会导致在训练集和测试集中都会出现的高预测误差。这会导致模型对训练数据有很强的假设，以及欠拟合。
