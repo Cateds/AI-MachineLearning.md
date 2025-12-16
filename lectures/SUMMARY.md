@@ -13,5 +13,5 @@
   - [机器学习概述](Part.2/lecture7.md)
   - [模型训练及数据预处理](Part.2/lecture8.md)
   - [特征选择](Part.2/lecture9.md)
-  - [支持向量机]()
+  - [支持向量机](Part.2/lecture10.md)
   - [人工神经网络入门]()
