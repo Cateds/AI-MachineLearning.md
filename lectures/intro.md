@@ -21,7 +21,7 @@
   1. [机器学习概述](Part.2/lecture7.md)
   2. [模型训练及数据预处理](Part.2/lecture8.md)
   3. [特征选择](Part.2/lecture9.md)
-  4. [支持向量机](Part.2/lecture10.md) (unimplemented!)
-  5. [人工神经网络入门](Part.2/lecture11.md) (unimplemented!)
+  4. [支持向量机](Part.2/lecture10.md)
+  5. [人工神经网络入门]() (unimplemented!)
 
 > 我觉得今年的内容量已经算得上是每章塞爆了，结果你说今年相比去年砍了很多内容是什么意思？
