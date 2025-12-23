@@ -15,3 +15,9 @@
   - [特征选择](Part.2/lecture9.md)
   - [支持向量机](Part.2/lecture10.md)
   - [人工神经网络入门](Part.2/lecture11.md)
+
+---
+
+- [Extra: 题目与知识点](Addon/readme.md)
+  - [Lec.1: AI 介绍](Addon/Introduction/introduction.md)
+  - [Lec.2: 优化的基本概念](Addon/Evolutionary_Computation/lecture2.md)
