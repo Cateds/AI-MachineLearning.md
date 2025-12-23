@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   srcDir: "../lectures",
+  base: "/AI-MachineLearning.md/",
   markdown: {
     math: true,
   },
