@@ -1,6 +1,8 @@
-/book
 /slides
 /quiz
+/node_modules
+/config/.vitepress/cache
+/config/.vitepress/dist
 
 # General
 .DS_Store
