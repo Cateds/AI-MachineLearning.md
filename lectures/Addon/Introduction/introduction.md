@@ -74,7 +74,7 @@
 
 ### A1. AI vs ML relationship
 
-#### Problem 1 (MCQ-style)\*\*
+#### Problem 1 (MCQ-style)
 
 Which statement is correct?
 
@@ -88,16 +88,16 @@ D. AI is a subset of ML
 
 E. AI is a subset of evolutionary computation
 
-**Solution**:
+**Solution** :
 
 - AI is a broad field aiming to build intelligent behavior.
 - ML is one approach inside AI (learning from data).
 - Therefore ML ⊂ AI.
 - All other statements contradict the subset relationship or invert it.
 
-**Final Answer**: A
+**Final Answer** : A
 
-#### Problem 2 (True/False)\*\*
+#### Problem 2 (True/False)
 
 (1) AI is a subset of machine learning.
 
@@ -105,7 +105,7 @@ E. AI is a subset of evolutionary computation
 
 (3) AI and machine learning are interchangeable.
 
-**Solution**:
+**Solution** :
 
 (1) False. The subset direction is reversed. ML ⊂ AI.
 

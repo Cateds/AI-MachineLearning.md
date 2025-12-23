@@ -63,10 +63,10 @@
 
 #### (A2) Objectives vs constraints; feasible space; comparing solutions
 
-- **Decision variables**: (X)
-- **Objective**: optimize (min/max)
-- **Constraints**: must satisfy (feasible/infeasible)
-- **Feasible space**: set of all solutions satisfying constraints
+- **Decision variables** : (X)
+- **Objective** : optimize (min/max)
+- **Constraints** : must satisfy (feasible/infeasible)
+- **Feasible space** : set of all solutions satisfying constraints
 - **Comparing solutions (PPT rule)**
   1. Two feasible: compare objective
   2. Feasible vs infeasible: feasible is better
@@ -97,9 +97,9 @@ $$
 
 #### (A4) Decision-variable representation + search space
 
-- **Binary**: $x_i\in\{0,1\}$ (feature selection / knapsack selection)
-- **Permutation**: $\mathbf{p}$ is a permutation of $\{1,\dots,n\}$ (TSP/QAP)
-- **Continuous**: $\mathbf{x}\in\mathbb{R}^n$, each with bounds $[l_i,u_i]$
+- **Binary** : $x_i\in\{0,1\}$ (feature selection / knapsack selection)
+- **Permutation** : $\mathbf{p}$ is a permutation of $\{1,\dots,n\}$ (TSP/QAP)
+- **Continuous** : $\mathbf{x}\in\mathbb{R}^n$, each with bounds $[l_i,u_i]$
 
 ---
 
@@ -186,7 +186,7 @@ $$
 **Problem**  
 Given passband and two stopbands specs with S11(dB), formulate min problem with objective & constraints, define $\mathbf{x}\in\mathbb{R}^{12}$, search space $\Omega$, and evaluation method.
 
-**Solution**:
+**Solution** :
 
 - Variables: $\mathbf{x}=(x_1,\dots,x_{12})\in\mathbb{R}^{12}$
 - Objective:
@@ -216,7 +216,7 @@ Write the above min/s.t. + $\mathbf{x}\in\Omega$ + simulation-based evaluation.
 **Problem**  
 Band 1.1–1.7 GHz: require $\max|S11|\le -14$ and $\max AR\le 3$. Minimize size $S(\mathbf{x})$.
 
-**Solution**:
+**Solution** :
 
 $$
 \begin{aligned}
@@ -277,7 +277,7 @@ Remaining points are PF.
 **Problem**  
 Two algorithms produce two PFs (min). Compare.
 
-**Solution**:
+**Solution** :
 
 - Convergence: closer to left-bottom is better
 - Diversity: wider coverage + more uniform spacing is better  
@@ -293,7 +293,7 @@ A complete comment must mention both convergence and diversity/coverage.
 **Problem**  
 Feature selection / TSP / network slicing: specify variable type and range.
 
-**Solution**:
+**Solution** :
 
 - Feature selection: $x_i\in\{0,1\}$
 - TSP: permutation of $\{1,\dots,n\}$
