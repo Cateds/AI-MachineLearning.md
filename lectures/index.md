@@ -26,6 +26,6 @@
 
 - 知识点总结和习题解析
   - [Lec.0: AI 介绍](Addon/Introduction/introduction.md)
-  - [Lec.1: 优化的基本概念](Addon/OptimizationBasics/optimization_basics.md)
+  - [Lec.1: 优化的基本概念](Addon/Evolutionary_Computation/lecture2.md)
 
 > 我觉得今年的内容量已经算得上是每章塞爆了，结果你说今年相比去年砍了很多内容是什么意思？
