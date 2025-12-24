@@ -43,12 +43,13 @@
 和 [Lec.4](lecture4.md#约束优化-constrained-optimization) 里提到的方法类似，我们把约束条件转化成惩罚项，加入到目标函数中，数学形式如下：
 
 $$
-
-f_{new}(x) = f(x) - p \cdot h(x) \\
-\mathrm{where}\ h(x) = \begin{cases}
+\begin{aligned}
+f_{new}(x) = & f(x) - p \cdot h(x) \\
+\mathrm{where}\quad & h(x) = \begin{cases}
   w(x) - c , \mathrm{if}\ w(x) > c \\
   0, \mathrm{otherwise}
 \end{cases}
+\end{aligned}
 $$
 
 - $f(x)$ 是原始的目标函数（总价值）

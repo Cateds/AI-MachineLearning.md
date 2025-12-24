@@ -5,8 +5,10 @@
 这里以一个优化问题为例子：
 
 $$
-\min f(x) = (x-1)^2 - 1\\
-s.t. g(x) = x - 1.5 \ge 0
+\begin{aligned}
+  \min\quad & f(x) = (x-1)^2 - 1 \\
+  \mathrm{s.t.}\quad & g(x) = x - 1.5 \ge 0
+\end{aligned}
 $$
 
 ![1758289362411](lecture4.assets/1758289362411.png)
@@ -34,15 +36,19 @@ $$
 这个标准下，我们就需要对 “违反约束的程度” 进行量化以便于比较，但是不同约束之间的程度可能不能直接比较，同时不同约束可能有不同的优先度————有的约束比其他的更重要。为了解决这个问题，可以用 **加权和** 的方式计算总的违反程度。
 
 $$
-\min f(x) \\
-\mathrm{s.t.}\quad g(x) \le c
+\begin{aligned}
+  \min \quad & f(x) \\
+  \mathrm{s.t.}\quad & g(x) \le c
+\end{aligned}
 $$
 
 这是原本的约束优化问题，它被转换成了下面的形式
 
 $$
-\min f(x) + k\cdot h(g(x), c) \\
-\mathrm{where}\quad h(g(x), c) = \max \{0, g(x) -c\}
+\begin{aligned}
+  \min \quad & f(x) + k\cdot h(g(x), c) \\
+  \mathrm{where}\quad & h(g(x), c) = \max \{0, g(x) -c\}
+\end{aligned}
 $$
 
 其中，$k$ 是惩罚系数 (penalty coefficient)，是一个标量，用于控制违反约束时乘法的强度。 $h(g(x), c)$ 是乘法函数，其量化了违反约束的程度。一个解越违反约束，$h(g(x), c)$ 的值就越大，从而使得目标函数的值增大，降低该解被选择的概率。
@@ -68,25 +74,29 @@ $$
 如果一个约束优化问题有多个约束，应该怎么做？
 
 $$
-\min f(x) \\
-\mathrm{s.t.}\begin{cases}
-  g_1(x) \ge c_1 \\
-  g_2(x) \le c_2 \\
-  g_3(x) \le c_3 \\
-  ...
-\end{cases}
+\begin{aligned}
+  \min \quad & f(x) \\
+  \mathrm{s.t.}\quad & \begin{cases}
+    g_1(x) \ge c_1 \\
+    g_2(x) \le c_2 \\
+    g_3(x) \le c_3 \\
+    ...
+  \end{cases}
+\end{aligned}
 $$
 
 首先，先把所有的约束化成相同的形式，也就是一个小于等于符号连接的不等式：
 
 $$
-\min f(x) \\
-\mathrm{s.t.}\begin{cases}
+\begin{aligned}
+\min \quad & f(x) \\
+\mathrm{s.t.}\quad & \begin{cases}
   -g_1(x) \le -c_1 \\
   g_2(x) \le c_2 \\
   g_3(x) \le c_3 \\
   ...
 \end{cases}
+\end{aligned}
 $$
 
 之后，把所有的约束按照单约束情况下的方法独立处理————也就是每个约束都有一个自己的惩罚系数 $k_i$
@@ -96,7 +106,7 @@ $$
   \min \ f(x) & + k_1 h(-g_1(x), -c_1) \\
   & + k_2 h(g_2(x), c_2) \\
   & + k_3 h(g_3(x), c_3) \\
-  & + ...
+  & + \dots
 \end{aligned} \\
 $$
 
@@ -149,11 +159,13 @@ end
 多目标优化是指在一个优化问题中，有多个目标函数需要同时优化。
 
 $$
-\min f_1(x_1, x_2, ..., x_n) \\
-\min f_2(x_1, x_2, ..., x_n) \\
-... \\
-\min f_m(x_1, x_2, ..., x_n) \\
-x = (x_1, x_2, ..., x_n)^T \in D \subseteq \R^n
+\begin{aligned}
+\min\quad & f_1(x_1, x_2, ..., x_n) \\
+\min\quad & f_2(x_1, x_2, ..., x_n) \\
+& ... \\
+\min\quad & f_m(x_1, x_2, ..., x_n) \\
+\mathrm{s.t.}\quad & x = (x_1, x_2, ..., x_n)^T \in D \subseteq R^n
+\end{aligned}
 $$
 
 - $x$ 是决策变量 (decision variable)
@@ -173,6 +185,8 @@ $$
 - $x$ 优势于 $y$
 - $y$ 优势于 $x$
 - $x$ 和 $y$ 无法比较
+
+> Dominance 除了优势的说法，还有支配的说法，在[最开始](./lecture2.md#多目标优化)提到过，当时说的就是支配。
 
 根据这样的不完全可比性，我们可以定义 **帕累托最优 (Pareto Optimality)**:
 
@@ -242,14 +256,16 @@ MOEA 是一种用于求解多目标优化问题的进化算法。它通过模拟
 要进行 MOEA/D 算法，首先要把多目标优化问题分解成多个子问题，而一个子问题的常见结构是：
 
 $$
-\min g(x) \\
-\mathrm{Inputs:}\begin{cases}
+\begin{aligned}
+\min\quad & g(x) \\
+\mathrm{Inputs:}\ &\begin{cases}
   分解问题 g(x) \\
   偏好向量 \lambda \\
   可能的参照点 z^* \\
   搜索空间 D \\
   目前最好的解 x^* \\
 \end{cases}
+\end{aligned}
 $$
 
 对于分解，常用的有两种方法：
@@ -260,8 +276,12 @@ $$
 以加权和为例。比如，原本有两个目标函数 $f_1(x)$ 和 $f_2(x)$，我们可以把它们分解成一个加权和的形式：
 
 $$
-g(x) = \lambda_1 f_1(x) + \lambda_2 f_2(x) = \lambda \cdot F(x) \\
-s.t.\quad \lambda_1 + \lambda_2 = 1,\quad \lambda_1, \lambda_2 \ge 0
+\begin{aligned}
+g(x) =  &\lambda_1 f_1(x) + \lambda_2 f_2(x) = \lambda \cdot F(x) \\
+\mathrm{s.t.}\quad & \lambda_1 + \lambda_2 = 1,\\
+& \lambda_1, \lambda_2 \ge 0
+
+\end{aligned}
 $$
 
 这样，一个子问题就变成了一个单目标优化问题，可以使用之前提到的进化算法来求解。
