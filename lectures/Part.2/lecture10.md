@@ -195,7 +195,7 @@ $C$ 是一个超参数，用来控制是更关注于得到一个更大的间隔�
 
 $$
 \begin{aligned}
-  \min_\alpha \quad &\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n a^i a^j y^i y^j (\bold{x}^i \cdot \bold{x}^j) - \sum_{i=1}^n a^i \\
+  \min_\alpha \quad &\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n a^i a^j y^i y^j (x^i \cdot x^j) - \sum_{i=1}^n a^i \\
   \text{s.t.} \quad & \sum_{i=1}^n a^i y^i = 0 \\
   & 0 \leq a^i \leq C \\
   & i = 1, \dots, n
@@ -210,7 +210,7 @@ $$
 
 > 这里略过点乘的定义，这个不是 optional：
 >
-> $(\bold{x}^i \cdot \bold{x}^j) = (\bold{x}^i)^T \bold{x}^j = \sum_{k=1}^d x_k^i x_k^j$
+> $(x^i \cdot x^j) = (x^i)^T x^j = \sum_{k=1}^d x_k^i x_k^j$
 
 ---
 
@@ -244,7 +244,7 @@ $$
 
 $$
 \begin{aligned}
-  \min_a \quad &\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n a^i a^j y^i y^j (\bold{x}^i \cdot \bold{x}^j) - \sum_{i=1}^n a^i \\
+  \min_a \quad &\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n a^i a^j y^i y^j (x^i \cdot x^j) - \sum_{i=1}^n a^i \\
   \text{s.t.} \quad & \sum_{i=1}^n a^i y^i = 0 \\
   & 0 \leq a^i \leq C \\
   & i = 1, \dots, n
@@ -257,7 +257,7 @@ $$
 \begin{aligned}
   x^i & \rightarrow \Phi(x^i)\\
   x^j & \rightarrow \Phi(x^j)\\
-  (\bold{x}^i \cdot \bold{x}^j) & \rightarrow  \Phi(x^i) \cdot \Phi(x^j)
+  (x^i \cdot x^j) & \rightarrow  \Phi(x^i) \cdot \Phi(x^j)
 \end{aligned}
 $$
 
@@ -271,14 +271,14 @@ $$
 
 $$
 \begin{aligned}
-  \min_\alpha \quad &\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n a^i a^j y^i y^j (\Phi(\bold{x}^i) \cdot \Phi(\bold{x}^j)) - \sum_{i=1}^n a^i \\
+  \min_\alpha \quad &\frac{1}{2}\sum_{i=1}^n\sum_{j=1}^n a^i a^j y^i y^j (\Phi(x^i) \cdot \Phi(x^j)) - \sum_{i=1}^n a^i \\
   \text{s.t.} \quad & \sum_{i=1}^n a^i y^i = 0 \\
   & 0 \leq a^i \leq C \\
   & i = 1, \dots, n
 \end{aligned}
 $$
 
-这样的计算的话，需要把每个数据点都经过一次 $\Phi$ 映射，计算量会非常大，然后每个 $\Phi(\bold{x}^i) \cdot \Phi(\bold{x}^j)$ 也需要计算，而输出空间的维度数目通常远大于输入空间，所以整个过程非常耗费时间和内存，显然需要优化。
+这样的计算的话，需要把每个数据点都经过一次 $\Phi$ 映射，计算量会非常大，然后每个 $\Phi(x^i) \cdot \Phi(x^j)$ 也需要计算，而输出空间的维度数目通常远大于输入空间，所以整个过程非常耗费时间和内存，显然需要优化。
 
 上述方案的问题在于，显式的计算 $\Phi(x^i)$ 和 $\Phi(x^j)$ 以及它们的点积是非常低效的。可以使用核技巧 (kernel trick) 来避免显式地计算映射后的向量：
 

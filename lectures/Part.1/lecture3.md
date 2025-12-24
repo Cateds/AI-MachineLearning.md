@@ -326,7 +326,7 @@ $$
 一个常见的测试函数是 `Rastrigin` 函数:
 
 $$
-f(\bold{x}) = 10d + \sum_{i=1}^d (x_i^2 - 10\cos(2\pi x_i)),\quad \bold{x} \in \R^d
+f(x) = 10d + \sum_{i=1}^d (x_i^2 - 10\cos(2\pi x_i)),\quad x \in \R^d
 $$
 
 ![1758286788721](lecture3.assets/1758286788721.png)
