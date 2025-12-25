@@ -94,11 +94,11 @@ F 检验是一种用于比较多个组之间均值差异的统计方法。在特
 2. 计算 F 统计量
 
    $$
-   F = \frac{MSB}{MSW} = \frac{SSB/(k-1)}{SSW/(n-k)}
+   F = \frac{MSB}{MSW} = \frac{SSB/(k-1)}{SSW/(N-k)}
    $$
 
-   - 其中， $MSB$ 是组间均方， $MSW$ 是组内均方
-   - $MSB = \frac{SSB}{dfB} = \frac{SSB}{k-1}$ ， $MSW = \frac{SSW}{dfW} = \frac{SSW}{N-k}$
+   - 其中， $MSB$ 是组间均方 (Mean Square Between)， $MSW$ 是组内均方 (Mean Square Within)，$SSB$ 是组间平方和 (Sum of Squares Between)，$SSW$ 是组内平方和 (Sum of Squares Within)
+   - $MSB = \frac{SSB}{df_B} = \frac{SSB}{k-1}$ ， $MSW = \frac{SSW}{df_W} = \frac{SSW}{N-k}$
    - $k$ 是类别数， $N$ 是总样本数
    - $SSB = \sum n_i(\overline{X}_i - \overline{X})^2$ ， $SSW = \sum \sum (X_{ij} - \overline{X}_i)^2$
    - 其中， $n_i$ 是第 $i$ 类的样本数， $\overline{X}_i$ 是第 $i$ 类的均值， $\overline{X}$ 是总体均值
