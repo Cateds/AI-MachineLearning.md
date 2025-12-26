@@ -101,6 +101,22 @@ $$
 
 ![1765893178116](lecture11.assets/1765893178116.png)
 
+这里使用的非线性激活函数是 $sigmoid$ 函数，计算过程如下：
+
+$$
+\mathrm{sigm}(x) = \frac{1}{1 + e^{-x}}
+$$
+
+以隐藏层第一个神经元为例子，其值的大小为：
+
+$$
+\begin{aligned}
+  h_1  & = (1+\exp(-0.35\times 0.1 - 0.9 \times 0.8))^{-1}  \\
+  & = \frac{1}{1+ e^{-0.755}} \approx 0.68
+
+\end{aligned}
+$$
+
 ### 反向传播 (Backward Propagation)
 
 #### 损失函数 (Loss Function)
