@@ -401,34 +401,6 @@ $$
 - 使数据更接近正态分布
   - 便于使用基于正态分布假设的模型
 
-##### Box-Cox 变换
-
-Box-Cox 变换是一种幂变换方法，适用于**正值数据**。其公式为：
-
-其正变换为:
-
-$$
-y_i^{(\lambda)}= \begin{cases}
- \frac{y_o^\lambda-1}{\lambda}\quad \mathrm{if}\ \lambda \neq 0 \\
- \log(y_o) \quad \mathrm{if}\ \lambda = 0
-\end{cases}
-$$
-
-而逆变换为:
-
-$$
-y_o^{(\lambda)}= \begin{cases}
- \sqrt[\lambda]{\lambda y_i + 1} \quad \mathrm{if}\ \lambda \neq 0 \\
- \exp(y_i) \quad \mathrm{if}\ \lambda = 0
-\end{cases}
-$$
-
-其中， $\lambda$ 是变换参数，可以通过对数形式的最大似然估计 (Maximum Likelihood Estimation, MLE) 来确定。 $y_o$ 是原始数据， $y_i$ 是变换后的数据。
-
-然后 Python 实现长这个样子，使用 `scipy.stats` ：
-
-![1765530515125](lecture8.assets/1765530515125.png)
-
 ## 数据集构造
 
 数据集构造通常有这样的几种方式
